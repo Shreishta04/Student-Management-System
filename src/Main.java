@@ -15,16 +15,16 @@ public class Main {
             ch = s.nextInt();
             switch(ch){
                 case 1:
-                    try{
-                        students.add(Student.createStudent());
-                    } catch (RuntimeException e) {
-                        System.out.println("Invalid datatype! Enter correct datatype.");
-                        students.add(Student.createStudent());
-                    }
+                    students.add(Student.createStudent());
                     break;
                 case 2:
-                    for (int i = 0; i < students.size(); i++) {
-                        students.get(i).displayStudent();
+                    if(students.isEmpty()){
+                        System.out.println("No Student Details to be displayed! Create student to display...");
+                    }
+                    else {
+                        for (int i = 0; i < students.size(); i++) {
+                            students.get(i).displayStudent();
+                        }
                     }
                     break;
                 case 3:
