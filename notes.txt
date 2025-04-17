@@ -1,0 +1,5 @@
+PUSHING TO GIT HUB-----------------
+- add (git add <filename>)
+- commit (git commit -m "message")
+- push (git push) - to push to current branch / (git push origin main) - origin is the remote repo which contains URL,
+main is the branch name

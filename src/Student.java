@@ -56,7 +56,8 @@ public class Student {
         while(flag == 0){
             try{
                 System.out.println("Enter mark2: ");
-                mark2 = s.nextFloat();s.nextLine();
+                mark2 = s.nextFloat();
+                s.nextLine();
                 flag = 1;
             } catch (InputMismatchException e) { //two ways to end a program flow: return or throw exception
                 System.out.println("Invalid datatype!");
