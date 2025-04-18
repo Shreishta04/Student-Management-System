@@ -5,6 +5,7 @@ out/
 notes.txt
 instructions.txt
 Student Management System.iml
+.idea/
 
 ### Eclipse ###
 .apt_generated
