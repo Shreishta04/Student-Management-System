@@ -2,6 +2,9 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+notes.txt
+instructions.txt
+Student Management System.iml
 
 ### Eclipse ###
 .apt_generated
