@@ -1,3 +1,7 @@
+package com.shreishta.training;
+import com.shreishta.training.services.studentService;
+import com.shreishta.training.models.Student;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
@@ -15,7 +19,7 @@ public class Main {
             ch = s.nextInt();
             switch(ch){
                 case 1:
-                    students.add(Student.createStudent());
+                    students.add(studentService.createStudent());
                     break;
                 case 2:
                     if(students.isEmpty()){
@@ -28,10 +32,10 @@ public class Main {
                     }
                     break;
                 case 3:
-                    Student.updateStudent(students);
+                    studentService.updateStudent(students);
                     break;
                 case 4:
-                    Student.delete(students);
+                    studentService.delete(students);
                     break;
                 case 5:
                     System.out.println("Exiting loop...");

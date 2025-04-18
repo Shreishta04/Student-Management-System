@@ -1,30 +1,12 @@
+package com.shreishta.training.services;
+
+import com.shreishta.training.models.Student;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Student {
-    //abstraction of variables (hiding data) - the variables of this class can be altered
-    //only by the methods within this class
-    private static int count = 0;
-    private int regNo;
-    private String name;
-    private int mark1, mark2;
-
-    public Student(String name, int mark1, int mark2){
-        count++;
-        this.regNo = count;
-        this.name = name;
-        this.mark1 = mark1;
-        this.mark2 = mark2;
-    }
-
-    public void displayStudent() {
-        System.out.println("Register no: " + regNo);
-        System.out.println("Name: " + name);
-        System.out.println("Mark 1: " + mark1);
-        System.out.println("Mark 2: " + mark2);
-    }
-
+public class studentService {
     /*utility method (helper methods are usually static)
     it is used to create a static object*/
 
@@ -39,6 +21,7 @@ public class Student {
                 System.out.println("Name field cannot be empty!");
             }
         }
+
         float mark1 = 0, mark2 = 0;
         int flag = 0;
         while(flag == 0) {
@@ -76,9 +59,9 @@ public class Student {
         int flag = 0;
         s.nextLine();
         for(int i = 0; i < students.size(); i++) {
-            if (searchRegNo == students.get(i).regNo) {
+            if (searchRegNo == students.get(i).getRegNo()) {
                 flag = 1;
-                System.out.println("Student " + students.get(i).regNo + " found!");
+                System.out.println("Student " + students.get(i).getRegNo() + " found!");
                 String newName = "";
                 while(newName == "") {
                     System.out.println("Enter name: ");
@@ -87,7 +70,7 @@ public class Student {
                         System.out.println("Name field cannot be empty!");
                     }
                 }
-                students.get(i).name = newName;
+                students.get(i).setName(newName);
 
                 float newMark1 = 0, newMark2 = 0;
                 flag = 0;
@@ -102,7 +85,7 @@ public class Student {
                         s.nextLine();
                     }
                 }
-                students.get(i).mark1 = Math.round(newMark1);
+                students.get(i).setMark1(Math.round(newMark1));
                 flag = 0;
                 while(flag == 0){
                     try{
@@ -115,7 +98,7 @@ public class Student {
                         s.nextLine();
                     }
                 }
-                students.get(i).mark2 = Math.round(newMark2);
+                students.get(i).setMark2(Math.round(newMark2));
                 System.out.println("Student details updated!");
             }
         }
@@ -129,9 +112,9 @@ public class Student {
         Scanner s = new Scanner(System.in);
         int searchRegNo = s.nextInt();
         s.nextLine();
-        for(int i = 0; i <= students.size(); i++){
-            if(searchRegNo == students.get(i).regNo){
-                System.out.println("Student " +students.get(i).regNo + " found");
+        for(int i = 0; i < students.size(); i++){
+            if(searchRegNo == students.get(i).getRegNo()){
+                System.out.println("Student " +students.get(i).getRegNo() + " found");
                 students.remove(i);
                 System.out.println("Student details deleted!");
                 return;
@@ -140,4 +123,3 @@ public class Student {
         System.out.println("Student not found!!");
     }
 }
-
