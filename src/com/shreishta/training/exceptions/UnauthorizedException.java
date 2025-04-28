@@ -1,4 +1,4 @@
-package com.shreishta.training.services;
+package com.shreishta.training.exceptions;
 
 public class UnauthorizedException extends Exception{
     public UnauthorizedException(String message){

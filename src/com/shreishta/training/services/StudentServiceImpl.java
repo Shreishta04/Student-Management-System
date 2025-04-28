@@ -1,16 +1,14 @@
 package com.shreishta.training.services;
-
 import com.shreishta.training.models.Student;
-
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class studentService {
+public class StudentServiceImpl implements studentService{
     /*utility method (helper methods are usually static)
     it is used to create a static object*/
 
-    public static Student createStudent(){
+    public Student createStudent(){
         Scanner s = new Scanner(System.in);
         String name = "";
         while(name == ""){
@@ -51,7 +49,7 @@ public class studentService {
         return student;
     }
 
-    public static void updateStudent(ArrayList<Student> students){
+    public void updateStudent(ArrayList<Student> students){
         Scanner s = new Scanner(System.in);
         System.out.println("Enter Reg No. to update: ");
         int searchRegNo = s.nextInt();
@@ -106,7 +104,7 @@ public class studentService {
         }
     }
 
-    public static void delete(ArrayList<Student> students){
+    public void deleteStudent(ArrayList<Student> students){
         System.out.println("Enter ID to delete: ");
         Scanner s = new Scanner(System.in);
         int searchRegNo = s.nextInt();

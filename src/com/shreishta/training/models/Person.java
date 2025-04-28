@@ -1,4 +1,4 @@
-package com.shreishta.training.services;
+package com.shreishta.training.models;
 
 public abstract class Person {
     protected static int count = 0;
