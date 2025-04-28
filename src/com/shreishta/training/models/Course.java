@@ -25,8 +25,6 @@ public class Course {
 
 
     public void display() {
-        System.out.println("List of Courses: ");
-        System.out.println("------------------");
         System.out.println("Course Id: " + courseId);
         System.out.println("Course Name: " + courseName);
         System.out.println(" ");

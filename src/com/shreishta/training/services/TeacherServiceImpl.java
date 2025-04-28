@@ -51,7 +51,7 @@ public class TeacherServiceImpl implements TeacherService {
         int flag = 0;
         Scanner s = new Scanner(System.in);
         System.out.println("Enter reg no: ");
-        int searchRegNo = s.nextInt();
+        final int searchRegNo = s.nextInt();
         s.nextLine();
         for (int t = 0; t < teachers.size(); t++) {
             if (searchRegNo == teachers.get(t).getRegNo()) {
@@ -104,7 +104,7 @@ public class TeacherServiceImpl implements TeacherService {
         int flag = 0;
         Scanner s = new Scanner(System.in);
         System.out.println("Enter reg no: ");
-        int searchRegNo = s.nextInt();
+        final int searchRegNo = s.nextInt();
         for (int t = 0; t < teachers.size(); t++) {
             if (searchRegNo == teachers.get(t).getRegNo()) {
                 flag = 1;

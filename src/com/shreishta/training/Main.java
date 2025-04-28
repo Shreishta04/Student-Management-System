@@ -82,6 +82,8 @@ public class Main {
                     }
                     break;
                 case 10:
+                    System.out.println("List of Courses");
+                    System.out.println("------------------");
                     if (courses.isEmpty()) {
                         System.out.println("No Courses created yet.");
                     } else {

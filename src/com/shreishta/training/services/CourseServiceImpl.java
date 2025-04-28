@@ -67,7 +67,7 @@ public class CourseServiceImpl implements CourseService {
             throw new IllegalStateException("No teachers exist. Create a teacher first before creating a course.");
         }
 
-        int searchTeacherId;
+        final int searchTeacherId;
         boolean teacherFound = false;
         Scanner s = new Scanner(System.in);
         System.out.println("Enter Teacher Id: ");
@@ -89,8 +89,7 @@ public class CourseServiceImpl implements CourseService {
             throw new UnauthorizedException("Teacher not found. Unauthorised to Update Courses.");
         }
 
-        int searchCourseId;
-        int tempCourseId = 0;
+        final int searchCourseId;
         boolean courseFound = false;
         String courseName = " ";
         System.out.println("Enter Course Id: ");
@@ -128,7 +127,7 @@ public class CourseServiceImpl implements CourseService {
 
         Scanner s = new Scanner(System.in);
         System.out.println("Enter Teacher Id: ");
-        int searchTeacherId = s.nextInt();
+        final int searchTeacherId = s.nextInt();
         boolean teacherFound = false;
 
 
@@ -146,7 +145,7 @@ public class CourseServiceImpl implements CourseService {
             throw new UnauthorizedException("Teacher not found! Unauthorized to delete courses!");
         }
 
-        int searchCourseId;
+        final int searchCourseId;
         String courseName = " ";
         System.out.println("Enter course ID to delete: ");
         searchCourseId = s.nextInt();
@@ -167,7 +166,7 @@ public class CourseServiceImpl implements CourseService {
     public void registerCourse(ArrayList<Student> students, ArrayList<Course> courses) throws UnauthorizedException {
         Scanner s = new Scanner(System.in);
         System.out.println("Enter Student Id: ");
-        int searchStudentId = s.nextInt();
+        final int searchStudentId = s.nextInt();
         boolean studentFound = false;
         boolean courseFound = false;
         String studentName = " ";
@@ -190,7 +189,7 @@ public class CourseServiceImpl implements CourseService {
         }
 
         System.out.println("Enter course Id to register: ");
-        int searchCourseId = s.nextInt();
+        final int searchCourseId = s.nextInt();
         for (Course c : courses) {
             if (searchCourseId == c.getCourseId()) {
                 courseFound = true;

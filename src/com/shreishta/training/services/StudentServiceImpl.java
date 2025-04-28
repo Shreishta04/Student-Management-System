@@ -54,7 +54,7 @@ public class StudentServiceImpl implements StudentService {
     public void updateStudent(ArrayList<Student> students) {
         Scanner s = new Scanner(System.in);
         System.out.println("Enter Reg No. to update: ");
-        int searchRegNo = s.nextInt();
+        final int searchRegNo = s.nextInt();
         int flag = 0;
         s.nextLine();
         for (int i = 0; i < students.size(); i++) {
@@ -109,7 +109,7 @@ public class StudentServiceImpl implements StudentService {
     public void deleteStudent(ArrayList<Student> students) {
         System.out.println("Enter ID to delete: ");
         Scanner s = new Scanner(System.in);
-        int searchRegNo = s.nextInt();
+        final int searchRegNo = s.nextInt();
         s.nextLine();
         for (int i = 0; i < students.size(); i++) {
             if (searchRegNo == students.get(i).getRegNo()) {
