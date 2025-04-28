@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class StudentServiceImpl implements studentService{
+public class StudentServiceImpl implements StudentService {
     /*utility method (helper methods are usually static)
     it is used to create a static object*/
 

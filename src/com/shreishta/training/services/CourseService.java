@@ -7,7 +7,7 @@ import com.shreishta.training.models.Teacher;
 
 import java.util.ArrayList;
 
-public interface courseService {
+public interface CourseService {
     Course createCourse(ArrayList<Teacher> teachers) throws UnauthorizedException;
     void updateCourse(ArrayList<Teacher> teachers, ArrayList<Course> courses) throws UnauthorizedException;
     void deleteCourse(ArrayList<Teacher> teachers, ArrayList<Course> courses) throws UnauthorizedException;

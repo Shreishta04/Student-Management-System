@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class TeacherServiceImpl implements teacherService{
+public class TeacherServiceImpl implements TeacherService {
 
     public Teacher createTeacher(){
         Scanner s = new Scanner(System.in);

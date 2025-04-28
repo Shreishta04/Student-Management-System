@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class CourseServiceImpl implements courseService{
+public class CourseServiceImpl implements CourseService {
 
     @Override
     public Course createCourse(ArrayList<Teacher> teachers) throws UnauthorizedException {
