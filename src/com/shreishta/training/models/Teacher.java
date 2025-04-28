@@ -4,7 +4,7 @@ public class Teacher extends Person {
     private String dept;
     private float salary;
 
-    public Teacher(String name, String dept, float salary){
+    public Teacher(String name, String dept, float salary) {
         super(name);
         this.dept = dept;
         this.salary = salary;
@@ -26,11 +26,11 @@ public class Teacher extends Person {
         this.salary = salary;
     }
 
-    public void display(){
+    public void display() {
         System.out.println(" ");
-        System.out.println("Reg No: " +getRegNo());
-        System.out.println("Name: " +getName());
-        System.out.println("Dept: " +dept);
-        System.out.println("Salary: " +salary);
+        System.out.println("Reg No: " + getRegNo());
+        System.out.println("Name: " + getName());
+        System.out.println("Dept: " + dept);
+        System.out.println("Salary: " + salary);
     }
 }

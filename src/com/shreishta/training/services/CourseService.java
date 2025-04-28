@@ -9,7 +9,10 @@ import java.util.ArrayList;
 
 public interface CourseService {
     Course createCourse(ArrayList<Teacher> teachers) throws UnauthorizedException;
+
     void updateCourse(ArrayList<Teacher> teachers, ArrayList<Course> courses) throws UnauthorizedException;
+
     void deleteCourse(ArrayList<Teacher> teachers, ArrayList<Course> courses) throws UnauthorizedException;
+
     void registerCourse(ArrayList<Student> students, ArrayList<Course> courses) throws UnauthorizedException;
 }

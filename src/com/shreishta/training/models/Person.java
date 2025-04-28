@@ -5,20 +5,21 @@ public abstract class Person {
     protected int regNo;
     protected String name;
 
-    public Person(String name){
+    public Person(String name) {
         count++;
         this.regNo = count;
         this.name = name;
     }
 
-    public int getRegNo(){
+    public int getRegNo() {
         return regNo;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
