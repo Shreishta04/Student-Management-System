@@ -1,10 +1,12 @@
 package com.shreishta.training.models;
 
+import com.shreishta.training.services.person;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Student {
+public class Student implements person {
     //abstraction of variables (hiding data) - the variables of this class can be altered
     //only by the methods within this class
     private static int count = 0;
@@ -51,6 +53,7 @@ public class Student {
         System.out.println("Name: " + name);
         System.out.println("Mark 1: " + mark1);
         System.out.println("Mark 2: " + mark2);
+        System.out.println(" ");
     }
 }
 

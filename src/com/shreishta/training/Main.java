@@ -1,6 +1,5 @@
-package com.shreishta.training;
+package com.shreishta.training.models;
 import com.shreishta.training.services.studentService;
-import com.shreishta.training.models.Student;
 
 import java.util.ArrayList;
 import java.util.Scanner;
