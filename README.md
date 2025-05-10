@@ -1,1 +1,1 @@
-# Student-Management-System
+# com.shreishta.training.models.Student-Management-System

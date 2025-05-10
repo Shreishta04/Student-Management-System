@@ -6,25 +6,24 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class studentService {
+public class StudentServiceImpl implements StudentService {
     /*utility method (helper methods are usually static)
     it is used to create a static object*/
 
-    public static Student createStudent(){
+    public Student createStudent() {
         Scanner s = new Scanner(System.in);
         String name = "";
-//      System.out.println("1"+name+"2");
-        while(name == ""){
+        while (name == "") {
             System.out.println("Enter name: ");
             name = s.nextLine();
-            if(name == ""){
+            if (name == "") {
                 System.out.println("Name field cannot be empty!");
             }
         }
 
         float mark1 = 0, mark2 = 0;
         int flag = 0;
-        while(flag == 0) {
+        while (flag == 0) {
             try {
                 System.out.println("Enter mark1: ");
                 mark1 = s.nextFloat();
@@ -36,8 +35,8 @@ public class studentService {
             }
         }
         flag = 0;
-        while(flag == 0){
-            try{
+        while (flag == 0) {
+            try {
                 System.out.println("Enter mark2: ");
                 mark2 = s.nextFloat();
                 s.nextLine();
@@ -52,18 +51,18 @@ public class studentService {
         return student;
     }
 
-    public static void updateStudent(ArrayList<Student> students){
+    public void updateStudent(ArrayList<Student> students) {
         Scanner s = new Scanner(System.in);
         System.out.println("Enter Reg No. to update: ");
-        int searchRegNo = s.nextInt();
+        final int searchRegNo = s.nextInt();
         int flag = 0;
         s.nextLine();
-        for(int i = 0; i < students.size(); i++) {
+        for (int i = 0; i < students.size(); i++) {
             if (searchRegNo == students.get(i).getRegNo()) {
                 flag = 1;
                 System.out.println("Student " + students.get(i).getRegNo() + " found!");
                 String newName = "";
-                while(newName == "") {
+                while (newName == "") {
                     System.out.println("Enter name: ");
                     newName = s.nextLine();
                     if (newName == "") {
@@ -74,7 +73,7 @@ public class studentService {
 
                 float newMark1 = 0, newMark2 = 0;
                 flag = 0;
-                while(flag == 0) {
+                while (flag == 0) {
                     try {
                         System.out.println("Enter mark1: ");
                         newMark1 = s.nextFloat();
@@ -87,8 +86,8 @@ public class studentService {
                 }
                 students.get(i).setMark1(Math.round(newMark1));
                 flag = 0;
-                while(flag == 0){
-                    try{
+                while (flag == 0) {
+                    try {
                         System.out.println("Enter mark2: ");
                         newMark2 = s.nextFloat();
                         s.nextLine();
@@ -107,14 +106,14 @@ public class studentService {
         }
     }
 
-    public static void delete(ArrayList<Student> students){
+    public void deleteStudent(ArrayList<Student> students) {
         System.out.println("Enter ID to delete: ");
         Scanner s = new Scanner(System.in);
-        int searchRegNo = s.nextInt();
+        final int searchRegNo = s.nextInt();
         s.nextLine();
-        for(int i = 0; i < students.size(); i++){
-            if(searchRegNo == students.get(i).getRegNo()){
-                System.out.println("Student " +students.get(i).getRegNo() + " found");
+        for (int i = 0; i < students.size(); i++) {
+            if (searchRegNo == students.get(i).getRegNo()) {
+                System.out.println("Student " + students.get(i).getRegNo() + " found");
                 students.remove(i);
                 System.out.println("Student details deleted!");
                 return;
